@@ -1,0 +1,661 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+/*Fuente google Inter*/
+
+* {
+    padding: 0;
+    margin: 0;
+
+    text-decoration: none;
+    /*elimina decoraciones del texto*/
+    list-style: none;
+    /*se eliminan las pelotitas de la lista*/
+    box-sizing: border-box;
+    /*se toma el final del border*/
+
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+}
+
+body {
+    background-color: black;
+    background-image: url(../assets/bg-03.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+
+    font-optical-sizing: auto;
+    color: white;
+}
+
+/*-----------------------------------------Header*/
+header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky; 
+    top: 0;
+    z-index: 10;
+    border: groove red 5px;
+    border-radius: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 0px 20px 10px 20px;
+}
+
+/*---------------------------------------Logo*/
+
+.inicio_contenedor{
+    background-color: rgba(0, 0, 0, 0.5);
+    border: outset red 5px;
+    border-radius: 20px;
+    margin: 20px;
+}
+
+.inicio_contenedor:active {
+    border: inset red 5px;
+    border-radius: 20px;
+    filter: brightness(75%);
+    transition: filter 0.5s;
+}
+
+#inicio_logo {
+
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+    
+    padding: 5px 10px;
+    user-select: none;
+    /*Impide la seleccion de texto (select, copy paste)*/
+}
+
+
+/*-----------------------------------------Menu hamburguesa*/
+#m_hamburguesa_chckbx {
+    display: none;
+}
+
+#m_hamburguesa_icon {
+    width: 40px;
+    margin-right: 10px;    
+}
+
+#m_hamburguesa {
+    cursor: pointer;
+    display: none;
+    /*oculta el icono hamburguesa en pantallas grandes*/
+}
+
+/*------------------------------------------Navbar*/
+#nav_contenedor {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    margin: 10px 10px 10px 0px;
+}
+
+#nav_ul {
+    margin-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+/*----------------------------------navbar botones*/
+#nav_ul li a{
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+}
+#nav_ul li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 10px 5px 10px 5px;
+    padding: 10px;
+    border: 5px outset transparent;
+    /* Añadir borde transparente */
+}
+
+#nav_ul li:hover {
+    border: outset red 5px;
+    box-shadow: 6px white;
+    border-radius: 20px;
+    filter: drop-shadow(0px 0px 5px white);
+    /*dropshaodw: primeros dos valores son los ejes, el 3ro es la difuminacion, 4to el color*/
+    transition: border-color 1s, filter 5s;
+    /* Transición suave para el cambio de color del borde y filtro */
+}
+
+#nav_ul li:active {
+    border: inset red 5px;
+    color: rgba(255, 255, 255, 0.829);
+    filter: drop-shadow(0px 0px 1px white) brightness(80%) contrast(300%);
+    transition: filter 0.1s;
+}
+
+/*--------------------------------------main*/
+#contedor_main {
+    padding: 20px;
+    margin: 10px 30px 10px 30px;
+
+}
+
+#Bienvenida{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Bienvenida h1{
+    font-size: 80px;
+}
+
+#portada_contenedor{        
+    margin: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+}
+
+#imgcine{
+    border: solid 5px red;
+    border-radius: 20px;
+    width: 100%;  
+    height: 25vw;  
+}
+
+
+#Q_S_Contenedor {
+    display: flex;
+    flex-direction: column;
+    margin: 0 40px;
+    padding: 5px;
+    border: solid 5px red;
+    border-radius: 20px;
+}
+
+#Q_S_Contenedor #QuienesSomos {
+    display: flex;
+    justify-content: center;
+}
+
+#Q_S_Contenedor #QuienesSomos h2 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+#Q_S_Contenedor p {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+#LeerMas {
+    display: none;
+}
+
+#Q_S_Texto {
+    display: block;
+}
+
+.btn_LeerMas {
+    display: none;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 30px;
+    text-align: center;
+    margin: 10px;
+    transition: 1s;
+    font-size: 20px;    
+}
+
+.btn_LeerMas:hover{
+    background-color: white;
+    color: red;
+}
+
+#h2_trailer_titulo{
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+#h2_trailer_titulo div h2{
+    font-size: 50px;
+    color: white;
+}
+/*-----------------------------------Seccion peliculas*/
+
+.peliculas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.pelicula:hover{
+    border-radius: 20px;
+    border: outset red 5px;        
+}
+
+.pelicula:active{
+    border-radius: 20px;
+    border: inset white 5px;
+}
+
+.pelicula {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    position: relative; /*Necesario para q se pueda ver el h4 overlay*/
+}
+
+.pelicula img {
+    width: 75%;
+    height: auto;
+    border-radius: 20px;    
+}
+
+.pelicula:hover img {
+    width: 75%;
+    height: auto;
+    border-radius: 20px;
+    filter: blur(5px);
+    transition: 0.5s;
+}
+
+
+.pelicula h3 {
+    display: block;    
+    color: white;
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.pelicula:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h4 {
+    color: white;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+/*--------------------------recomendadas*/
+
+#section_recom{
+    padding: 20px 40px 10px 20px;
+    margin: 0px 40px;
+    border: solid red 5px;
+    border-radius: 20px;
+}
+
+#recomendadas_h5{
+    display: flex;
+    justify-content: center;
+}
+
+#recomendadas_h5 h5{
+    font-size: 60px;
+    margin: 30px;
+    display: block;        
+}
+
+#recomendadas{
+    display: flex;
+    overflow-x: scroll;
+    gap: 20px;
+}
+
+.recomendada img{
+    width: 200px;
+    border-radius: 20px;
+}
+
+
+/* -------------------------------------------scrollbar */
+#recomendadas::-webkit-scrollbar {
+    height: 10px;
+}
+
+#recomendadas::-webkit-scrollbar-thumb {
+    background-color: red;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+#recomendadas::-webkit-scrollbar-track {
+    background-color: black;
+    border-radius: 10px;
+}
+
+
+
+/*---------------------------footer*/
+footer {
+    border: groove red 5px;
+    border-radius: 40px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 20px 0px 20px;
+}
+
+#footer-ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    align-content: center;
+}
+#footer-ul li a {
+    font-size: 20px;
+    font-weight: bolder;
+    color: white;
+}
+#footer-ul li {
+
+    margin: 10px 5px 10px 5px;
+    padding: 10px;
+    border: 5px outset transparent;
+    /* Añadir borde transparente */
+}
+
+#footer-ul li:hover {
+    border: outset red 5px;
+    box-shadow: 6px white;
+    border-radius: 20px;
+    filter: drop-shadow(0px 0px 5px white);
+    /*dropshaodw: primeros dos valores son los ejes, el 3ro es la difuminacion, 4to el color*/
+    transition: border-color 1s, filter 5s;
+    /* Transición suave para el cambio de color del borde y filtro */
+}
+
+#footer-ul li:active {
+    border: inset red 5px;
+    color: rgba(255, 255, 255, 0.829);
+    filter: drop-shadow(0px 0px 1px white) brightness(80%) contrast(300%);
+    transition: filter 0.1s;
+}
+
+
+
+/* Responsividad */
+@media screen and (max-width: 1165px) {
+    .inicio{
+        margin-top: 20px;
+    }
+
+}
+
+@media screen and (max-width: 1200px) {
+    header {
+        justify-content: space-around;
+        margin: 0px 10px 10px 10px;
+    }
+
+    #Bienvenida h1{
+        font-size: 60px;
+    }
+
+    #h2_trailer_titulo div h2{
+        font-size: 3vw;
+        color: white;
+    }
+
+    .peliculas {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas medianas */
+    }
+
+    #recomendadas_h5 h5{
+        font-size: 50px;
+        margin: 30px;
+        display: block;        
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #m_hamburguesa {
+        display: block;
+    }
+    #m_hamburguesa_chckbox{
+        display: block;
+    }
+
+    #nav_contenedor {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        position: absolute;
+        top: 70px;
+        left: 0;
+    }
+
+    #nav_ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #nav_ul li {
+        width: 100%;
+        text-align: center;
+        border: none;
+    }
+
+    #m_hamburguesa_chckbx:checked ~ #nav_contenedor {
+        display: flex;
+    }
+    /*-----------------------------*/
+    #Bienvenida h1{
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    #portada_contenedor{        
+        margin: 30px;
+        border-radius: 20px;
+        display: none;
+        justify-items: center;
+        justify-content: center;
+    }
+
+    #h2_trailer_titulo div h2{
+        font-size: 25px;
+        color: white;
+    }
+
+    .peliculas {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+    }
+
+    #Q_S_Texto {
+        display: none;
+    }
+
+    #LeerMas:checked ~ #Q_S_Texto {
+        display: block;
+    }
+
+    .btn_LeerMas {
+        display: block;
+    }    
+
+    /*#LeerMas:checked ~ .btn_LeerMas {
+        display: none;
+    }*/     /*Habilitar si desea que desaparesca el boton al pulsar*/
+
+    #recomendadas_h5 h5{
+        font-size: 40px;
+        margin: 30px;
+        display: block;        
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #Bienvenida h1{
+        font-size: 30px;
+    }
+
+    #h2_trailer_titulo div h2{
+        font-size: 4vw;
+        color: white;
+    }
+    
+    #Q_S_Contenedor #QuienesSomos h2{
+        font-size: 30px;
+        text-decoration: underline;
+        margin-bottom: 5px;
+    }
+
+    #recomendadas_h5 h5{
+        font-size: 30px;
+        margin: 30px;
+        display: block;        
+    }
+
+    .recomendada img{
+        width: 100px;
+        border-radius: 20px;
+    }
+    
+
+}
+
+@media screen and (max-width: 400px) {
+    #inicio_logo {
+        font-size: 20px;
+    }
+    #m_hamburguesa_icon {
+        width: 30px;
+    }
+
+    #Bienvenida h1{
+        font-size: 20px;
+    }
+
+    #h2_trailer_titulo div h2{
+        font-size: 4vw;
+        color: white;
+    }
+    .peliculas {
+        grid-template-columns: 1fr; /* 1 columna en pantallas muy pequeñas */
+    }
+}
+
+
+
+/*Login*/
+.header_content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 95vh; 
+    margin: 0;
+    background-image: url(../assets/Peliculas/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box; /* incluye padding y border en el tamaño total */
+}
+
+.header1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%; /* La mitad del ancho de la pantalla */
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.77); 
+    border-radius: 20px;
+    box-sizing: border-box; /* Para incluir padding y border en el tamaño total */
+    overflow: hidden; /* Para asegurarnos de que no haya desbordamiento */
+    position: relative; /* Necesario para posicionar elementos hijos */
+}
+
+#h1_container h1 {
+    color: white;
+    font-size: 4vw; 
+    margin-bottom: 20px;
+}
+
+#form_container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box; /* Para incluir padding en el tamaño total */
+}
+
+legend {
+    color: white;
+    font-size: 1.5vw;
+    margin-bottom: 20px;
+}
+
+.header1 form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header1 form label {
+    font-size: 1.2vw;
+    color: white;
+    margin: 10px 0;
+}
+
+.header1 form input[type="email"],
+.header1 form input[type="password"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2vw;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box; /* Para incluir padding en el tamaño total */
+}
+
+.header1 form input[type="submit"],
+.header1 form input[type="reset"] {
+    width: 40%;
+    padding: 10px;
+    margin: 10px;
+    background-color: red;
+    color: white;
+    border: solid white 2px;
+    font-size: 1.2vw;    
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.header1 form input[type="submit"]:hover,
+.header1 form input[type="reset"]:hover {
+    background-color: darkred;
+}

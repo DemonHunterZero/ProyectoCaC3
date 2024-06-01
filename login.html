@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CaC-Login</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="./assets/MovieIcon.png" type="image/x-icon">
+    <script src="./js/script.js"></script>
+</head>
+
+<body>
+    <a href="#" name='Inicio'></a>
+    <header>
+
+        <div class="inicio_contenedor">
+            <a href="./index.html" id="inicio_logo">CaC-Movies</a>
+        </div>
+
+        <input type="checkbox" name="" id="m_hamburguesa_chckbx">
+        <label for="m_hamburguesa_chckbx" id="m_hamburguesa">
+            <img src="./assets/menu.png" id="m_hamburguesa_icon" alt="menu">
+        </label>
+
+        <nav id="nav_contenedor">
+
+            <div id="nav_ul_contenedor">
+                <ul id="nav_ul">
+                    <li>
+                        <a href="">Lista Completa</a>
+                    </li>
+                    <li>
+                        <a href="#QuienesSomos">Quienes Somos</a>
+                    </li>
+                    <li>
+                        <a href="">Contacto</a>
+                    </li>
+                    <li>
+                        <a href="./login.html">Ingresar</a>
+                    </li>
+                    <li>
+                        <a href="">Registrarse</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+    
+    <div class="header_content">
+        <div class="header1">
+            <div id="h1_container">
+                <h1>Login</h1>
+            </div>
+            <div id="form_container">
+                <form id="loginForm" action="" method="post">
+                    <legend>Ingrese su usuario (e-mail) y contraseña</legend>
+                    <label for="CorreoElectronico">E-mail</label>
+                    <input type="email" placeholder="email" id="CorreoElectronico" name="CorreoElectronico" size="20" maxlength="50" required>
+                    <br>
+                    <label for="Contraseña">Password</label>
+                    <input type="password" placeholder="password" id="Contraseña" name="Contraseña" size="20" maxlength="50" required>
+                    <br>
+                    <label for="Login">Ingresar</label>
+                    <input type="submit" class="btn_1" value="Login">
+                    <label for="reset">Borrar Datos</label>
+                    <input type="reset" class="btn_1" value="Reset">
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-btns-contenedor">
+            <ul id="footer-ul">
+                <li>
+                    <a href="#Inicio">Inicio</a>
+                </li>
+                <li>
+                    <a href="">Lista Completa</a>
+                </li>
+                <li>
+                    <a href="#QuienesSomos">Quienes Somos</a>
+                </li>
+                <li>
+                    <a href="">Contacto</a>
+                </li>
+                <li>
+                    <a href="./login.html">Ingresar</a>
+                </li>
+                <li>
+                    <a href="./register.html">Registrarse</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    
+</body>
+
+</html>
