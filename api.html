@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coneccion con Api</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" href="./assets/MovieIcon.png" type="image/x-icon">
+    
+</head>
+
+<body>
+    <a href="#" name='Inicio'></a>
+    <header>
+
+        <div class="inicio_contenedor">
+            <a href="./index.html" id="inicio_logo">CaC-Movies</a>
+        </div>
+
+        <input type="checkbox" name="" id="m_hamburguesa_chckbx">
+        <label for="m_hamburguesa_chckbx" id="m_hamburguesa">
+            <img src="./assets/menu.png" id="m_hamburguesa_icon" alt="menu">
+        </label>
+
+        <nav id="nav_contenedor">
+
+            <div id="nav_ul_contenedor">
+                <ul id="nav_ul">
+                    <li>
+                        <a href="">Lista Completa</a>
+                    </li>
+                    <li>
+                        <a href="#QuienesSomos">Quienes Somos</a>
+                    </li>
+                    <li>
+                        <a href="./api.html">API</a>
+                    </li>
+                    <li>
+                        <a href="./login.html">Ingresar</a>
+                    </li>
+                    <li>
+                        <a href="./register.html">Registrarse</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+
+
+
+
+    <main>
+        <div id="h1_API_contenedor">
+            <h1 class="h1_API">Imagenes desde la API</h1>
+        </div>        
+
+        <div class="img_API_contenedor" id="img_contenedor"></div>
+
+    </main>
+    <script>
+        try {
+
+            const contenedor = document.getElementById("img_contenedor");
+            fetch("https://rickandmortyapi.com/api/character")
+            /*.then(response => console.log(response))*/
+            .then(response => response.json())
+            
+            .then(datos => {
+                console.log(datos.results);
+
+                datos.results.forEach(element => {
+                    console.log(element);
+
+                    const div = document.createElement("div");
+                    const img = document.createElement("img");
+                    img.src = element.image;
+                    img.alt = element.name;
+                    img.style.width = "200px";
+                    const p = document.createElement("p");
+                    p.textContent = element.name;
+                    div.appendChild(img);
+                    div.appendChild(p);
+                    contenedor.appendChild(div);    
+                });
+
+            });        
+            
+        } catch (error) {
+            console.log(error);
+        }
+    </script>
+
+
+    <footer class="footer">
+        <div class="footer-btns-contenedor">
+            <ul id="footer-ul">
+                <li>
+                    <a href="#Inicio">Inicio</a>
+                </li>
+                <li>
+                    <a href="">Lista Completa</a>
+                </li>
+                <li>
+                    <a href="#QuienesSomos">Quienes Somos</a>
+                </li>
+                <li>
+                    <a href="">Contacto</a>
+                </li>
+                <li>
+                    <a href="./login.html">Ingresar</a>
+                </li>
+                <li>
+                    <a href="./register.html">Registrarse</a>
+                </li>
+            </ul>
+        </div> 
+    </footer>
+
+</body>
+
+</html>

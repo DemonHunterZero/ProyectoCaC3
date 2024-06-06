@@ -659,3 +659,21 @@ legend {
 .header1 form input[type="reset"]:hover {
     background-color: darkred;
 }
+
+
+/*API*/
+#h1_API_contenedor{
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    text-align: center;
+    text-decoration: underline;
+    justify-content: center;
+
+}
+#h1_API{
+    color: white;
+    font-size: 4vw; 
+    margin-bottom: 20px;
+    text-align: center;
+}
