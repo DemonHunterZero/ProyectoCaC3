@@ -789,6 +789,10 @@ th, td {
 }
 th {
     background-color: black;
+    font-size: 1.4vw;
+}
+td{
+    font-size: 1.25vw;
 }
 td img {
     width: 200px;
