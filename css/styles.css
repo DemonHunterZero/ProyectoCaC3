@@ -632,8 +632,20 @@ legend {
 }
 
 .header1 form input[type="email"],
-.header1 form input[type="password"] {
+.header1 form input[type="password"]
+{
     width: 80%;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1.2vw;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box; /* Para incluir padding en el tamaño total */
+}
+
+.header1 form input[type="text"],
+.header1 form input[type="file"] {
+    width: 50%;
     padding: 10px;
     margin-bottom: 20px;
     font-size: 1.2vw;
@@ -676,4 +688,109 @@ legend {
     font-size: 4vw; 
     margin-bottom: 20px;
     text-align: center;
+}
+
+
+/*Api Recomendadas*/
+.addMovie-container{
+    display: flex;    
+    width: 100%;
+    padding: 20px;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.addMovie {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 20px;
+    border: solid white 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    text-align: center;
+    justify-content: space-evenly;
+}
+.addMovie h2 {
+    margin-bottom: 20px;
+    font-size: 1.5vw;
+}
+.addMovie label {
+    display: block;
+    margin-bottom: 5px;
+    text-align: left;
+}
+.addMovie input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+}
+.addMovie input[type="submit"],
+.addMovie input[type="reset"] {
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.addMovie input[type="submit"]:hover,
+.addMovie input[type="reset"]:hover  {
+    background-color: #d40813;
+}
+
+/*tabla recomendadas*/
+#h2-recomendadas-container{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+#h2-recomendadas-container h2{
+    font-size: 2vw;
+    color: white;
+}
+
+
+#padreTabla{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+#tableMovies-container{
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.432);
+    margin: 10px;
+    padding: 10px;
+    border-radius: 20px;
+    box-sizing: border-box;
+}
+
+table {
+    width: 100%;
+    background-color: black;
+    border-collapse: collapse;    
+    margin-top: 20px;
+}
+th, td {
+    border: 3px solid #ddd;
+    padding: 10px;
+    text-align: center;
+
+}
+th {
+    background-color: black;
+}
+td img {
+    width: 200px;
+    height: auto;
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CaC-Movies</title>
+    <title>CaC-Login</title>
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="shortcut icon" href="./assets/MovieIcon.png" type="image/x-icon">
     <script src="./js/script.js"></script>
@@ -18,7 +18,7 @@
         </div>
 
         <input type="checkbox" name="" id="m_hamburguesa_chckbx">
-        <label for="m_hamburguesa-chckbx" id="m_hamburguesa">
+        <label for="m_hamburguesa_chckbx" id="m_hamburguesa">
             <img src="./assets/menu.png" id="m_hamburguesa_icon" alt="menu">
         </label>
 
@@ -36,7 +36,7 @@
                         <a href="">Contacto</a>
                     </li>
                     <li>
-                        <a href="">Ingresar</a>
+                        <a href="./login.html">Ingresar</a>
                     </li>
                     <li>
                         <a href="">Registrarse</a>
@@ -46,6 +46,50 @@
         </nav>
     </header>
 
+    
+    <div class="addMovie-container">
+        <div class="addMovie">
+            <h2>Recomiende sus pelis favoritas</h2>
+            <form onsubmit="agregarPelicula(event)">
+                <label for="titulo">Titulo:</label>
+                <input type="text" id="titulo" name="titulo" placeholder="Ingrese el nombre de la pelicula" size="20" maxlength="50" required>
+                <label for="genero">Genero:</label>
+                <input type="text" id="genero" name="genero" placeholder="Ingrese el genero de la pelicula" size="20" maxlength="50" required>
+                <label for="duracion">Duracion:</label>
+                <input type="text" id="duracion" placeholder="hh:mm " name="duracion" size="20" maxlength="50" required>
+                <label for="imagen">Url Portada:</label>
+                <input type="text" id="imagen" placeholder="Ingrese la url de una imagen de portada" name="imagen" required>
+                <input type="submit" value="Recomendar!">
+                <input type="reset" value="Nueva Recomendacion">
+            </form>
+        </div>
+    </div>
+    
+    <br>
+    <br>
+
+    <div id="h2-recomendadas-container">
+        <h2>Estas son las peliculas recomendadas por ustedes</h2>
+    </div>
+
+
+<div id="padreTabla">
+    <div id="tableMovies-container">
+        <table id="tableMovies">
+            <thead>
+                <tr>
+                    <th>Titulo</th>
+                    <th>Genero</th>
+                    <th>Duracion</th>
+                    <th>Imagen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Aqui se pondran -->
+            </tbody>
+        </table>
+    </div>
+</div>
 
     <footer class="footer">
         <div class="footer-btns-contenedor">
@@ -63,7 +107,7 @@
                     <a href="">Contacto</a>
                 </li>
                 <li>
-                    <a href="">Ingresar</a>
+                    <a href="./login.html">Ingresar</a>
                 </li>
                 <li>
                     <a href="./register.html">Registrarse</a>
@@ -73,4 +117,5 @@
     </footer>
     
 </body>
+<script src="./js/script.js"></script>
 </html>
